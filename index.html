@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="components/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script type="module" src="main.js" defer></script>
-    
     <title>Master Pomodoro</title>
 </head>
+
 <body class="bg-slate-800 h-screen flex flex-col items-center justify-center">
-    
+
     <div id="timer-display" class="text-[10rem] text-slate-50 font-bold mb-12 tracking-widest drop-shadow-lg">
         25:00
     </div>
@@ -27,6 +27,21 @@
             RESET
         </button>
     </div>
+
+    <div id="list-task"></div>
+    
+    <button id="add-task">
+        ADICIONAR TAREFA
+    </button>
+    
+    <input type="text" id="name-task">
+
+    <template id="task-template">
+        <div>
+            <label class="task-text"></label>
+            <input type="checkbox" name="interesses" value="tecnologia">
+        </div>
+    </template>
 
 </body>
 </html>
