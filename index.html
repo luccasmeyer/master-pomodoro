@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="module" src="main.js" defer></script>
+    
+    <title>Master Pomodoro</title>
+</head>
+<body class="bg-slate-800 h-screen flex flex-col items-center justify-center">
+    
+    <div id="timer-display" class="text-[10rem] text-slate-50 font-bold mb-12 tracking-widest drop-shadow-lg">
+        25:00
+    </div>
+
+    <div class="flex gap-4">
+        <button id="button-start" class="text-2xl text-slate-50 font-bold border-solid border-slate-50 rounded-md border-2 px-8 py-4 hover:bg-slate-50 hover:text-slate-800 transition-colors">
+            START
+        </button>
+        <button id="button-stop" class="text-2xl text-slate-50 font-bold border-solid border-slate-50 rounded-md border-2 px-8 py-4 hover:bg-slate-50 hover:text-slate-800 transition-colors">
+            STOP
+        </button>
+        <button id="button-reset" class="text-2xl text-slate-50 font-bold border-solid border-slate-50 rounded-md border-2 px-8 py-4 hover:bg-slate-50 hover:text-slate-800 transition-colors">
+            RESET
+        </button>
+    </div>
+
+</body>
+</html>
