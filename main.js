@@ -1,5 +1,5 @@
 import { formatarTempo } from './functions/timerLogic.js';
-import { createTask } from './functions/addTsk.js';
+import { createTask } from './functions/createTask.js';
 
 const displayTempo = document.getElementById('timer-display');
 const btnStart = document.getElementById('button-start');
@@ -7,6 +7,7 @@ const btnStop = document.getElementById('button-stop');
 const btnReset = document.getElementById('button-reset');
 const nameTask = document.getElementById('name-task');
 const btnAddTask = document.getElementById('add-task');
+const btnSetTime = document.getElementById('button-settime');
 
 const TEMPO_INICIAL_MINUTOS = 1;
 let tempoRestante = TEMPO_INICIAL_MINUTOS * 60;
@@ -49,7 +50,16 @@ function addTask(){
     nameTask.value = '';
 }
 
+function setTime(){
+    const time = document.getElementById('set-text');
+    const timeValue = time.value;
+
+    tempoRestante = timeValue
+    displayTempo.textContent = formatarTempo(tempoRestante);
+}
+
 btnStart.addEventListener('click', iniciarPomodoro);
 btnStop.addEventListener('click', pararPomodoro);
 btnReset.addEventListener('click', resetarPomodoro);
 btnAddTask.addEventListener('click', addTask);
+btnSetTime.addEventListener('click', setTime);
